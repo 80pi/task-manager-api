@@ -158,7 +158,7 @@ app.delete('/user/me',auth,async(req,res)=>{
 
 
 
-// for loginign
+// for logining a user
 app.post('/user/login', async(req,res)=>{
     try {
         const data=await UserModel.findByCredentials(req.body.email,req.body.password)
@@ -179,8 +179,8 @@ app.post('/user/logout',auth,async(req,res)=>{
         })
         await req.user.save()
         res.send()
-    } catch (error) {
-        res.status(400).send(error) 
+    } catch (e) {
+        res.status(400).send(e) 
     }
 })
 

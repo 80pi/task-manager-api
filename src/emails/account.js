@@ -1,3 +1,6 @@
+// in which this is for sending emails
+
+
 const sgMail = require('@sendgrid/mail')
 
 
