@@ -12,7 +12,7 @@ app.post('/task',auth, async (req, res) => {
     })
     try {
         await data.save()
-        res.send(data)
+        res.status(201).send(data)
         
     } catch (e) {
         res.status(400).send()
@@ -101,7 +101,7 @@ app.patch('/task/:id',auth,async(req,res)=>{
                 }
                 res.send(dd)
             } catch (error) {
-                res.status(500).send(error)
+                res.status(404).send(error)
             }
         })
   

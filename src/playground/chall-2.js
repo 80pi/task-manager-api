@@ -1,5 +1,5 @@
-require('../db/mongoose')
-const User = require('../models/user');
+// require('../db/mongoose')
+// const User = require('../models/user');
 
 // challange to find and delete by id in monoggose
 
@@ -12,10 +12,17 @@ const User = require('../models/user');
 //     console.log(e)
 // })
 
-const deleteId=async(id,age)=>{
-    await User.findByIdAndDelete(id)
-    const cou=await User.countDocuments({age})
-    return cou
-}
+// const deleteId=async(id,age)=>{
+//     await User.findByIdAndDelete(id)
+//     const cou=await User.countDocuments({age})
+//     return cou
+// }
 
-deleteId('619624478850a0e7d422826a',-1).then(i=>console.log(i)).catch(e=>console.log(e))
+// deleteId('619624478850a0e7d422826a',-1).then(i=>console.log(i)).catch(e=>console.log(e))
+
+
+const add=(a,b)=>{
+    return new Promise((resolve,reject)=>{
+        resolve(a+b)
+    })
+}
